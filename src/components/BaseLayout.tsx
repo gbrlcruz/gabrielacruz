@@ -54,6 +54,7 @@ export default async function RootLayout({
         <html
             lang={locale}>
             <head>
+                <meta name="facebook-domain-verification" content="xlejdnkedsd64nuaay0o2wcmrxh75l" />
                 <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
             </head>
             <body className={cx(
