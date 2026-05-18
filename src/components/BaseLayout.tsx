@@ -55,7 +55,7 @@ export default async function RootLayout({
             <head>
                 <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
             </head>
-            <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 backdrop-blur-md bg-white/90 dark:bg-black/90">
+            <main className="flex-auto min-w-0 mt-8 mx-auto max-w-md sm:max-w-lg 2xl:max-w-xl flex flex-col px-2 md:px-0 backdrop-blur-md bg-white/90 dark:bg-black/90">
                 <NextIntlClientProvider messages={messages}>
                     < Navbar />
                     {children}
