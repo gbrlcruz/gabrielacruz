@@ -51,26 +51,19 @@ export default async function RootLayout({
     const messages = await getMessages();
 
     return (
-        <html
-            lang={locale}>
+        <>
             <head>
-                <meta name="facebook-domain-verification" content="xlejdnkedsd64nuaay0o2wcmrxh75l" />
                 <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
             </head>
-            <body className={cx(
-                'font-sans subpixel-antialiased antia max-w-md sm:max-w-lg 2xl:max-w-xl mt-8 mx-auto dark:bg-black',
-                fontSans.variable
-            )}>
-                <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 backdrop-blur-md bg-white/90 dark:bg-black/90">
-                    <NextIntlClientProvider messages={messages}>
-                        < Navbar />
-                        {children}
-                    </NextIntlClientProvider>
-                    <Footer />
-                    <Analytics />
-                    <SpeedInsights />
-                </main>
-            </body>
-        </html>
+            <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 backdrop-blur-md bg-white/90 dark:bg-black/90">
+                <NextIntlClientProvider messages={messages}>
+                    < Navbar />
+                    {children}
+                </NextIntlClientProvider>
+                <Footer />
+                <Analytics />
+                <SpeedInsights />
+            </main>
+        </>
     )
 }
